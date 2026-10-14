@@ -1,0 +1,19 @@
+tok1,tok2,tok3,tok4,tok5,count,share_pct
+mul <- mul,mul <- add,add <- mul,call <- add,call <- add,222142,11.107122
+mul <- add,add <- mul,call <- add,call <- add,call <- add,222142,11.107122
+add <- mul,call <- add,call <- add,call <- add,add <- add,222142,11.107122
+call <- add,call <- add,call <- add,add <- add,icmp <- add,222142,11.107122
+call <- add,call <- add,add <- add,icmp <- add,br <- icmp,222142,11.107122
+call <- add,add <- add,icmp <- add,br <- icmp,mul <- mul,221997,11.099872
+add <- add,icmp <- add,br <- icmp,mul <- mul,mul <- add,221997,11.099872
+icmp <- add,br <- icmp,mul <- mul,mul <- add,add <- mul,221997,11.099872
+br <- icmp,mul <- mul,mul <- add,add <- mul,call <- add,221997,11.099872
+mul <- add,mul <- add,mul <- mul,mul <- add,add <- mul,145,0.007250
+mul <- add,mul <- mul,mul <- add,add <- mul,call <- add,145,0.007250
+call <- add,add <- add,icmp <- add,br <- icmp,add <- add,144,0.007200
+add <- add,icmp <- add,br <- icmp,add <- add,icmp <- add,144,0.007200
+icmp <- add,br <- icmp,add <- add,icmp <- add,br <- icmp,144,0.007200
+br <- icmp,add <- add,icmp <- add,br <- icmp,mul <- add,144,0.007200
+add <- add,icmp <- add,br <- icmp,mul <- add,mul <- add,144,0.007200
+icmp <- add,br <- icmp,mul <- add,mul <- add,mul <- mul,144,0.007200
+br <- icmp,mul <- add,mul <- add,mul <- mul,mul <- add,144,0.007200

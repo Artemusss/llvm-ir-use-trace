@@ -1,0 +1,13 @@
+tok1,tok2,count,share_pct
+call <- add,call <- add,444284,22.214211
+add <- add,icmp <- add,222286,11.114306
+icmp <- add,br <- icmp,222286,11.114306
+mul <- mul,mul <- add,222142,11.107106
+mul <- add,add <- mul,222142,11.107106
+add <- mul,call <- add,222142,11.107106
+call <- add,add <- add,222142,11.107106
+br <- icmp,mul <- mul,221997,11.099856
+mul <- add,mul <- add,145,0.007250
+mul <- add,mul <- mul,145,0.007250
+br <- icmp,add <- add,144,0.007200
+br <- icmp,mul <- add,144,0.007200

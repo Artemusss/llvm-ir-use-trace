@@ -1,0 +1,100 @@
+# Анализ паттернов трассы use-записей (User <- Operand)
+Файл трассы : build/trace.log
+Всего записей (токенов): 2000000
+Уникальных записей (n=1): 7
+Окна: 1..5; топ-20 на окно
+
+========================================================================
+[окно = 1 инстр.]  различных паттернов: 7  всего окон: 2000000
+------------------------------------------------------------------------
+       count     доля  паттерн
+      666426   33.32%  call <- add
+      222432   11.12%  mul <- add
+      222286   11.11%  add <- add
+      222286   11.11%  icmp <- add
+      222286   11.11%  br <- icmp
+      222142   11.11%  mul <- mul
+      222142   11.11%  add <- mul
+
+========================================================================
+[окно = 2 инстр.]  различных паттернов: 12  всего окон: 1999999
+------------------------------------------------------------------------
+       count     доля  паттерн
+      444284   22.21%  call <- add  ,  call <- add
+      222286   11.11%  add <- add  ,  icmp <- add
+      222286   11.11%  icmp <- add  ,  br <- icmp
+      222142   11.11%  mul <- mul  ,  mul <- add
+      222142   11.11%  mul <- add  ,  add <- mul
+      222142   11.11%  add <- mul  ,  call <- add
+      222142   11.11%  call <- add  ,  add <- add
+      221997   11.10%  br <- icmp  ,  mul <- mul
+         145    0.01%  mul <- add  ,  mul <- add
+         145    0.01%  mul <- add  ,  mul <- mul
+         144    0.01%  br <- icmp  ,  add <- add
+         144    0.01%  br <- icmp  ,  mul <- add
+
+========================================================================
+[окно = 3 инстр.]  различных паттернов: 15  всего окон: 1999998
+------------------------------------------------------------------------
+       count     доля  паттерн
+      222286   11.11%  add <- add  ,  icmp <- add  ,  br <- icmp
+      222142   11.11%  mul <- mul  ,  mul <- add  ,  add <- mul
+      222142   11.11%  mul <- add  ,  add <- mul  ,  call <- add
+      222142   11.11%  add <- mul  ,  call <- add  ,  call <- add
+      222142   11.11%  call <- add  ,  call <- add  ,  call <- add
+      222142   11.11%  call <- add  ,  call <- add  ,  add <- add
+      222142   11.11%  call <- add  ,  add <- add  ,  icmp <- add
+      221997   11.10%  icmp <- add  ,  br <- icmp  ,  mul <- mul
+      221997   11.10%  br <- icmp  ,  mul <- mul  ,  mul <- add
+         145    0.01%  mul <- add  ,  mul <- add  ,  mul <- mul
+         145    0.01%  mul <- add  ,  mul <- mul  ,  mul <- add
+         144    0.01%  icmp <- add  ,  br <- icmp  ,  add <- add
+         144    0.01%  br <- icmp  ,  add <- add  ,  icmp <- add
+         144    0.01%  icmp <- add  ,  br <- icmp  ,  mul <- add
+         144    0.01%  br <- icmp  ,  mul <- add  ,  mul <- add
+
+========================================================================
+[окно = 4 инстр.]  различных паттернов: 17  всего окон: 1999997
+------------------------------------------------------------------------
+       count     доля  паттерн
+      222142   11.11%  mul <- mul  ,  mul <- add  ,  add <- mul  ,  call <- add
+      222142   11.11%  mul <- add  ,  add <- mul  ,  call <- add  ,  call <- add
+      222142   11.11%  add <- mul  ,  call <- add  ,  call <- add  ,  call <- add
+      222142   11.11%  call <- add  ,  call <- add  ,  call <- add  ,  add <- add
+      222142   11.11%  call <- add  ,  call <- add  ,  add <- add  ,  icmp <- add
+      222142   11.11%  call <- add  ,  add <- add  ,  icmp <- add  ,  br <- icmp
+      221997   11.10%  add <- add  ,  icmp <- add  ,  br <- icmp  ,  mul <- mul
+      221997   11.10%  icmp <- add  ,  br <- icmp  ,  mul <- mul  ,  mul <- add
+      221997   11.10%  br <- icmp  ,  mul <- mul  ,  mul <- add  ,  add <- mul
+         145    0.01%  mul <- add  ,  mul <- add  ,  mul <- mul  ,  mul <- add
+         145    0.01%  mul <- add  ,  mul <- mul  ,  mul <- add  ,  add <- mul
+         144    0.01%  add <- add  ,  icmp <- add  ,  br <- icmp  ,  add <- add
+         144    0.01%  icmp <- add  ,  br <- icmp  ,  add <- add  ,  icmp <- add
+         144    0.01%  br <- icmp  ,  add <- add  ,  icmp <- add  ,  br <- icmp
+         144    0.01%  add <- add  ,  icmp <- add  ,  br <- icmp  ,  mul <- add
+         144    0.01%  icmp <- add  ,  br <- icmp  ,  mul <- add  ,  mul <- add
+         144    0.01%  br <- icmp  ,  mul <- add  ,  mul <- add  ,  mul <- mul
+
+========================================================================
+[окно = 5 инстр.]  различных паттернов: 18  всего окон: 1999996
+------------------------------------------------------------------------
+       count     доля  паттерн
+      222142   11.11%  mul <- mul  ,  mul <- add  ,  add <- mul  ,  call <- add  ,  call <- add
+      222142   11.11%  mul <- add  ,  add <- mul  ,  call <- add  ,  call <- add  ,  call <- add
+      222142   11.11%  add <- mul  ,  call <- add  ,  call <- add  ,  call <- add  ,  add <- add
+      222142   11.11%  call <- add  ,  call <- add  ,  call <- add  ,  add <- add  ,  icmp <- add
+      222142   11.11%  call <- add  ,  call <- add  ,  add <- add  ,  icmp <- add  ,  br <- icmp
+      221997   11.10%  call <- add  ,  add <- add  ,  icmp <- add  ,  br <- icmp  ,  mul <- mul
+      221997   11.10%  add <- add  ,  icmp <- add  ,  br <- icmp  ,  mul <- mul  ,  mul <- add
+      221997   11.10%  icmp <- add  ,  br <- icmp  ,  mul <- mul  ,  mul <- add  ,  add <- mul
+      221997   11.10%  br <- icmp  ,  mul <- mul  ,  mul <- add  ,  add <- mul  ,  call <- add
+         145    0.01%  mul <- add  ,  mul <- add  ,  mul <- mul  ,  mul <- add  ,  add <- mul
+         145    0.01%  mul <- add  ,  mul <- mul  ,  mul <- add  ,  add <- mul  ,  call <- add
+         144    0.01%  call <- add  ,  add <- add  ,  icmp <- add  ,  br <- icmp  ,  add <- add
+         144    0.01%  add <- add  ,  icmp <- add  ,  br <- icmp  ,  add <- add  ,  icmp <- add
+         144    0.01%  icmp <- add  ,  br <- icmp  ,  add <- add  ,  icmp <- add  ,  br <- icmp
+         144    0.01%  br <- icmp  ,  add <- add  ,  icmp <- add  ,  br <- icmp  ,  mul <- add
+         144    0.01%  add <- add  ,  icmp <- add  ,  br <- icmp  ,  mul <- add  ,  mul <- add
+         144    0.01%  icmp <- add  ,  br <- icmp  ,  mul <- add  ,  mul <- add  ,  mul <- mul
+         144    0.01%  br <- icmp  ,  mul <- add  ,  mul <- add  ,  mul <- mul  ,  mul <- add
+
